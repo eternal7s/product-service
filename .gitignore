@@ -1,0 +1,20 @@
+# Gradle / build
+.gradle/
+build/
+out/
+bin/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code / Eclipse
+.vscode/
+.classpath
+.project
+.settings/
+
+# 기타
+*.class
+*.log
+.DS_Store
