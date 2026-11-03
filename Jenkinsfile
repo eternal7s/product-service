@@ -64,10 +64,10 @@ pipeline {
         expression { params.TARGET_ENV != 'production' }
       }
       steps {
-        withCredentials(/* [
+        withCredentials([
           file(credentialsId: 'kubeconfig-docker-desktop', variable: 'KUBECONFIG'),
           usernamePassword(credentialsId: 'gitops-repo-cred', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_TOKEN')
-        ] */) {
+        ]) {
           sh '''
             rm -rf manifests-checkout
             git clone https://${GIT_USER}:${GIT_TOKEN}@${MANIFESTS_REPO} manifests-checkout
